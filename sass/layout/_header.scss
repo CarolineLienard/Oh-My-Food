@@ -6,15 +6,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 1.2em 0em 1.2em 0em; 
     &__return {
         color: black;
         position: absolute;
         left: 5%;
-    }
-    &__logo {
-        @include mobile-only {
-            margin: 5px 5px 5px 5px; 
-            padding: 5px 5px 5px 5px; 
-        }
     }
 }

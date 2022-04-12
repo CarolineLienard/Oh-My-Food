@@ -1,0 +1,93 @@
+.location-section {
+    background-color: $background-light;
+    height: 3.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    >i {
+        color: $secondary-color-font;
+        margin-right: 1.2em;
+    }
+}
+
+.exploration-section {
+    background-color: $background-pale;
+    height: 12em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em 2em 2em 2em; 
+    >h1 {
+        font-size: 20px;
+    }
+    >span {
+        font-weight: 300;
+        margin: 1.2em 0em 1.2em 0em;
+    }
+    >button {
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 1em 1em 1em 1em;
+        box-shadow: 2px 2px 2px 2px grey;
+    }
+    :hover {
+        lighting-color: 50%;
+        cursor: pointer;
+    }
+}
+
+.detail-section {
+    margin: 1em 1em 1em 1em;
+    &__title {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin: 1em 0em 1em 0em;
+    }
+    &__container{
+        display: flex;
+        margin: 2em 1em 1em 2em;
+        @include ipad-only {
+        flex-direction: column;
+        }
+        &-button {
+            background-color: $background-pale;
+            height: 4.2em;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 1px 1px 1px black;
+            width: 100%;
+            margin: 1em 1em 1em 1em;
+            @include ipad-only {
+            margin: 1em 0em 1em 0em;
+            }
+            &-number {
+                background-color: $primary-color;
+                width: 1.5em;
+                height: 1.5em;
+                border-radius: 50%;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.9em;
+                margin: 0em 1.7em 0em -0.5em;
+            }
+            &-icon {
+                color: $third-color-font;
+                margin: 0em 1.7em 0em 0em;
+            }
+            &-title {
+                color: $primary-color-font;
+            }
+        }
+        :hover {
+            background-color: $secondary-color;
+            cursor: pointer;
+        }
+    }
+}    
