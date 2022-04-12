@@ -3,5 +3,18 @@
 /** Hover & active **/
 /** Breakpoints **/
 /** Responsive mixins **/
+header {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 4px grey;
+  text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+  .logo-container {
+    margin: 5px 5px 5px 5px;
+    padding: 8px 5px 5px 5px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

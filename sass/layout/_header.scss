@@ -1,0 +1,13 @@
+header {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 4px grey;
+    text-align: center;
+}
+
+.logo-container {
+    @include mobile-only {
+        margin: 5px 5px 5px 5px; 
+        padding: 8px 5px 5px 5px; 
+    }
+}
