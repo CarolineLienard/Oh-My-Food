@@ -1,0 +1,19 @@
+{
+  "name": "oh-my-food",
+  "version": "1.0.0",
+  "description": "Food order website ",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://CarolineLienard@github.com/CarolineLienard/Oh-My-Food.git"
+  },
+  "author": "Caroline Lienard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarolineLienard/Oh-My-Food/issues"
+  },
+  "homepage": "https://github.com/CarolineLienard/Oh-My-Food#readme"
+}
