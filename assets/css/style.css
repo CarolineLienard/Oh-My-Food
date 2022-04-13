@@ -86,7 +86,6 @@ ul li {
   color: grey;
 }
 .restaurant-card__title :hover::before {
-  animation: fill 1s ease-out;
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
