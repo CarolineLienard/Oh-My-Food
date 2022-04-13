@@ -1,7 +1,7 @@
 .restaurant-card {
     background-color: white;
     border-radius: 20px;
-    width: 43%;
+    width: 40%;
     box-shadow: 3px 3px 14px #d8d8d8;
     margin: 1em 0em 3em 0em;
     @include ipad-only {
@@ -15,7 +15,7 @@
         position: relative;
         >img {
         width: 100%;
-        height: 18em;
+        height: 14em;
         object-position: center;
         object-fit: cover;
         border-radius: 15px 15px 0px 0px;
@@ -30,14 +30,14 @@
             box-shadow: 1px 1px 10px $secondary-color-font;
             padding: 0.4em 1em 0.4em 1em;
             position: absolute;
-            top: 0.5em;
-            right: 0.5em;
+            top: 0.8em;
+            right: 0.9em;
         }    
     }
     &__title {
         display: flex;
         flex-direction: column;
-        padding: 0.8em 1em 1em 1em;
+        padding: 0.8em 1em 1em 1.5em;
         position: relative;
         line-height: 1.5em;
         >h3 {
@@ -50,7 +50,7 @@
         >i {
             position: absolute;
             top: 1em;
-            right: 1.5em;
+            right: 1em;
             color: $third-color-font;
         }
         :hover::before {
