@@ -1,0 +1,25 @@
+.footer {
+    background-color: $background-dark;
+    color: white;
+    padding: 3em 1em 3em 1em;
+    >ul {
+        line-height: 1.8em;
+        font-size: 1.2em;
+        >li:nth-child(1) {
+            font-family: "Shrikhand";
+            font-size: 1.5em;
+            margin: 0.6em 0em 0.6em 0em;
+        }
+        >li:nth-child(2) {
+            i {
+                margin-right: 1em;
+            }
+        }
+        >li:nth-child(3) {
+            i {
+                margin-right: 0.7em;
+            }
+        }
+        
+    }
+}
