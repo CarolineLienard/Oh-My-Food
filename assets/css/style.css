@@ -114,7 +114,7 @@ ul li {
 .footer {
   background-color: #353535;
   color: white;
-  padding: 3em 1em 3em 1em;
+  padding: 3em 1em 3em 3em;
 }
 .footer > ul {
   display: flex;
@@ -129,7 +129,6 @@ ul li {
   .footer > ul {
     flex-direction: column;
     align-items: flex-start;
-    justify-content: baseline;
   }
 }
 .footer > ul > li:nth-child(1) {
