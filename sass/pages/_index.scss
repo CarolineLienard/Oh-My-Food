@@ -46,18 +46,20 @@
 }
 
 .detail-section {
-    margin: 2.5em 1em 2em 1em;
+    margin: 3em 1em 3em 1em;
     @include mobile-only {
         margin: 2.5em 0em 2.5em 0em;
     }
-    &__title {
+    >span {
         font-size: 1.5em;
         font-weight: 700;
         margin-left: 1em;
     }
     &__container{
         display: flex;
-        margin: 1.2em 1em 1em 2em;
+        justify-content: center;
+        align-items: center;
+        margin: 1em 1.5em 1em 1.5em;
         @include ipad-only {
         flex-direction: column;
         }
@@ -71,8 +73,11 @@
             width: 100%;
             margin: 1em 1em 1em 1em;
             @include ipad-only {
+                width: 90%;
+            }
+            @include mobile-only {
             margin: 1em 0em 1em 0em;
-            width: 25em;
+            width: 90%;
             }
             >i {
                 color: $third-color-font;
@@ -83,9 +88,13 @@
                 list-style: none;
             }
         }
-        ul :hover {
+        :hover {
             cursor: pointer;
-            color: $hover-color;
+            color: inherit;
+            background-color: $hover-color;
+        }
+        :hover i {
+            color: $third-color-font;
         }
     }
 }
@@ -105,14 +114,16 @@
 
 .restaurant {
     background-color: #F2F2F2;
-    margin: 2.5em 1em 1em 1em;
+    padding: 2em 1em 3em 1em;
     @include mobile-only {
         margin: 0;
     }
     >h2 {
-        margin: 1em 1em 1em 2em;
+        font-size: 1.5em;
+        margin-left: 1em;
     }
     &_container {
+    margin: 1em 1.5em 1em 1.5em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
