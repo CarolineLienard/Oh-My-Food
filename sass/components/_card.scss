@@ -1,21 +1,27 @@
 .restaurant-card {
     background-color: white;
     border-radius: 20px;
-    width: 48%;
+    width: 43%;
     box-shadow: 3px 3px 14px #d8d8d8;
-    margin: 1em 1em 1em 1em;
+    margin: 1em 0em 3em 0em;
+    @include ipad-only {
+        margin: 1em 0em 2em 0em;
+    }
     @include mobile-only {
         width: 100%;
-        margin: 1em 0em 1em 0em;
+        margin: 1.4em 0em 1.4em 0em;
     }
     &__image {
         position: relative;
         >img {
         width: 100%;
-        height: 12em;
+        height: 18em;
         object-position: center;
         object-fit: cover;
         border-radius: 15px 15px 0px 0px;
+        @include ipad-only {
+            height: 12em;
+        }
         }
         >span {
             background-color: $third-color;
