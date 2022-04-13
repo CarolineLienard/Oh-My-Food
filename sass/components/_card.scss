@@ -1,0 +1,58 @@
+.restaurant-card {
+    background-color: white;
+    border-radius: 20px;
+    width: 28%;
+    box-shadow: 3px 3px 14px #d8d8d8;
+    @include mobile-only {
+        width: 80%;
+    }
+    &__image {
+        position: relative;
+        >img {
+        width: 100%;
+        height: 12em;
+        object-position: center;
+        object-fit: cover;
+        border-radius: 15px 15px 0px 0px;
+        }
+        >span {
+            background-color: $third-color;
+            color: $accent-color-font;
+            border-radius: 3px;
+            box-shadow: 1px 1px 10px $secondary-color-font;
+            padding: 0.4em 1em 0.4em 1em;
+            position: absolute;
+            top: 0.5em;
+            right: 0.5em;
+        }    
+    }
+    &__title {
+        display: flex;
+        flex-direction: column;
+        padding: 0.8em 1em 1em 1em;
+        position: relative;
+        line-height: 1.5em;
+        >h3 {
+            font-size: 1.1em;
+            margin: 0;
+        }
+        >span {
+            font-weight: 300;
+        }
+        >i {
+            position: absolute;
+            top: 1em;
+            right: 1.5em;
+            color: $third-color-font;
+        }
+        :hover::before {
+            animation: fill 1s ease-out;
+            background: linear-gradient(#FF79DA, #9356DC);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            transition: 500ms ease-out;
+        }
+    }
+}
