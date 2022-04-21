@@ -1,0 +1,38 @@
+.enchante {
+    &__image {
+        background-image: url("../../assets/restaurants/enchante.jpg");
+        width: 100%;
+        height: 18em;
+        max-height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    &__menu {
+        background-color: $background-pale;
+        padding: 2em 2em 1em 2em;
+        border-radius: 20px 20px 0px 0px;
+        margin-top: -2em;
+        @include mobile-only {
+            padding: 2em 1.3em 2em 1.3em;
+        }
+        &--title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2 {
+                font-family: "Shrikhand";
+                font-size: 1.7em;
+            }
+            i {
+                margin-right: 0.5em;
+            }
+        }
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        button {
+            cursor: pointer;
+        }
+    }
+}

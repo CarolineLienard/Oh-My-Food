@@ -13,7 +13,7 @@
     }
     &__image {
         position: relative;
-        >img {
+        img {
         width: 100%;
         height: 14em;
         object-position: center;
@@ -21,6 +21,9 @@
         border-radius: 15px 15px 0px 0px;
         @include ipad-only {
             height: 12em;
+        }
+        @include mobile-only {
+            height: 8em;
         }
         }
         >span {
@@ -40,26 +43,17 @@
         padding: 0.8em 1em 1em 1.5em;
         position: relative;
         line-height: 1.5em;
-        >h3 {
+        h3 {
             font-size: 1.1em;
             margin: 0;
         }
-        >span {
+        span {
             font-weight: 300;
         }
-        >i {
+        i {
             position: absolute;
             top: 1em;
             right: 1em;
-            color: $third-color-font;
-        }
-        :hover::before {
-            background: linear-gradient(#FF79DA, #9356DC);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-            transition: 500ms ease-out;
         }
     }
 }

@@ -9,7 +9,7 @@
   font-family: "Roboto";
 }
 
-h1 {
+h1, h2, h3, h4 {
   margin: 0;
 }
 
@@ -20,6 +20,33 @@ a {
 
 ul li {
   list-style: none;
+}
+
+.like-icon {
+  color: grey;
+  cursor: pointer;
+}
+.like-icon:hover::before {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  transition: 500ms ease-out;
+}
+
+button {
+  background: linear-gradient(to left top, #9356DC 0%, #FF79DA 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 1em 1.8em 1em 1.8em;
+  box-shadow: 0px 4px 4px #dadada;
+  margin: 0.5em 0em 1em 0em;
+}
+button:hover {
+  opacity: 80%;
+  cursor: pointer;
 }
 
 .restaurant-card {
@@ -43,7 +70,7 @@ ul li {
 .restaurant-card__image {
   position: relative;
 }
-.restaurant-card__image > img {
+.restaurant-card__image img {
   width: 100%;
   height: 14em;
   object-position: center;
@@ -51,8 +78,13 @@ ul li {
   border-radius: 15px 15px 0px 0px;
 }
 @media screen and (max-width: 990px) {
-  .restaurant-card__image > img {
+  .restaurant-card__image img {
     height: 12em;
+  }
+}
+@media screen and (max-width: 680px) {
+  .restaurant-card__image img {
+    height: 8em;
   }
 }
 .restaurant-card__image > span {
@@ -72,28 +104,113 @@ ul li {
   position: relative;
   line-height: 1.5em;
 }
-.restaurant-card__title > h3 {
+.restaurant-card__title h3 {
   font-size: 1.1em;
   margin: 0;
 }
-.restaurant-card__title > span {
+.restaurant-card__title span {
   font-weight: 300;
 }
-.restaurant-card__title > i {
+.restaurant-card__title i {
   position: absolute;
   top: 1em;
   right: 1em;
-  color: grey;
-}
-.restaurant-card__title :hover::before {
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
-  transition: 500ms ease-out;
 }
 
+.menu-card {
+  margin: 2em 0em 2em 0em;
+}
+.menu-card__title h3 {
+  border-bottom: 3px solid #99E2D0;
+  width: 2em;
+  line-height: 1.9em;
+  font-weight: 300;
+  font-size: 1.1em;
+}
+.menu-card__component {
+  background-color: white;
+  border-radius: 15px;
+  width: 30%;
+  margin: 1.2em 0em 1.2em 0em;
+  box-shadow: 3px 3px 14px #d8d8d8;
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (max-width: 680px) {
+  .menu-card__component {
+    width: 100%;
+  }
+}
+.menu-card__component--title {
+  padding: 1em 1em 1em 1em;
+}
+.menu-card__component--title h4 {
+  margin: 0;
+  font-weight: 500;
+}
+.menu-card__component--title span {
+  font-weight: 300;
+}
+.menu-card__component--price {
+  position: relative;
+}
+.menu-card__component--price span {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+.menu-card__component--price:hover {
+  background-color: red;
+}
+.menu-card__component--check {
+  color: white;
+  font-size: 1.7em;
+  height: 100%;
+  padding: 0 0.7em;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 0;
+  right: -0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+/*menu tick rotate animation*/
+.menu-card__component:hover .card-price {
+  padding-right: 4em;
+  transition: 0.5s ease;
+}
+
+.menu-card__component:hover .menu-card__component--check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide-in 0.5s ease forwards;
+}
+
+.fa-circle-check {
+  animation: rotate-center 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-8px);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .header {
   width: 100%;
   background-color: white;
@@ -150,7 +267,7 @@ ul li {
   justify-content: center;
   color: #353535;
 }
-.location-section > i {
+.location-section i {
   margin-right: 1.2em;
 }
 
@@ -164,31 +281,18 @@ ul li {
   text-align: center;
   padding: 1.8em 2em 1.8em 2em;
 }
-.exploration-section > h1 {
+.exploration-section h1 {
   font-size: 1.5em;
 }
 @media screen and (max-width: 680px) {
-  .exploration-section > h1 {
+  .exploration-section h1 {
     padding: 0em 2em 0em 2em;
   }
 }
-.exploration-section > span {
+.exploration-section span {
   font-weight: 300;
   line-height: 1.4em;
   margin: 1.2em 0em 1.2em 0em;
-}
-.exploration-section > button {
-  background: linear-gradient(to left top, #9356DC 0%, #FF79DA 100%);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  padding: 1em 1.5em 1em 1.5em;
-  box-shadow: 0px 4px 4px #dadada;
-  margin: 0.5em 0em 1em 0em;
-}
-.exploration-section :hover {
-  opacity: 80%;
-  cursor: pointer;
 }
 
 .detail-section {
@@ -199,7 +303,7 @@ ul li {
     margin: 2.5em 0em 2.5em 0em;
   }
 }
-.detail-section > span {
+.detail-section span {
   font-size: 1.5em;
   font-weight: 700;
   margin-left: 1em;
@@ -208,7 +312,7 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1em 1.5em 1em 1.5em;
+  margin: 1em 2em 1em 2em;
 }
 @media screen and (max-width: 990px) {
   .detail-section__container {
@@ -274,7 +378,7 @@ ul li {
     margin: 0;
   }
 }
-.restaurant > h2 {
+.restaurant h2 {
   font-size: 1.5em;
   margin-left: 1em;
 }
@@ -284,6 +388,50 @@ ul li {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+}
+@media screen and (max-width: 680px) {
+  .restaurant_container {
+    margin: 1em 1em 1em 1em;
+  }
+}
+
+.enchante__image {
+  background-image: url("../../assets/restaurants/enchante.jpg");
+  width: 100%;
+  height: 18em;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.enchante__menu {
+  background-color: #f6f6f6;
+  padding: 2em 2em 1em 2em;
+  border-radius: 20px 20px 0px 0px;
+  margin-top: -2em;
+}
+@media screen and (max-width: 680px) {
+  .enchante__menu {
+    padding: 2em 1.3em 2em 1.3em;
+  }
+}
+.enchante__menu--title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.enchante__menu--title h2 {
+  font-family: "Shrikhand";
+  font-size: 1.7em;
+}
+.enchante__menu--title i {
+  margin-right: 0.5em;
+}
+.enchante__button {
+  display: flex;
+  justify-content: center;
+}
+.enchante__button button {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
