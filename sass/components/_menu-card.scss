@@ -1,9 +1,13 @@
 .menu-card {
     margin: 2em 0em 2em 0em;
+    width: 100%;
+    @include ipad-only {
+    margin: 1em 0em 1em 0em;    
+    }
     &__title {
         h3 {
             border-bottom: 3px solid $third-color;
-            width: 2em;
+            width: 2.5em;
             line-height: 1.9em;
             font-weight: 300;
             font-size: 1.1em;
@@ -12,7 +16,7 @@
     &__component {
         background-color: white;
         border-radius: 15px;
-        width: 30%;
+        width: 94%;
         margin: 1.2em 0em 1.2em 0em;
         box-shadow: 3px 3px 14px #d8d8d8;
         position: relative;
@@ -22,9 +26,16 @@
         }
         &--title {
             padding: 1em 1em 1em 1em;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 65%;
             h4 {
-                margin: 0;
-                font-weight: 500;
+            margin: 0;
+            font-weight: 500;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
             }
             span {
                 font-weight: 300;
@@ -34,6 +45,7 @@
             position: relative;
             span {
                 position: absolute;
+                font-weight: 500;
                 right: 1em;
                 bottom: 1em;
             }

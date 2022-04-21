@@ -2,7 +2,7 @@
     &__image {
         background-image: url("../../assets/restaurants/enchante.jpg");
         width: 100%;
-        height: 18em;
+        height: 19em;
         max-height: 100%;
         background-size: cover;
         background-position: center;
@@ -31,8 +31,21 @@
     &__button {
         display: flex;
         justify-content: center;
+        margin: 2.8em 0em 3em 0em;
+        @include mobile-only {
+            margin: 0.5em 0em 1.8em 0em;
+        }
         button {
             cursor: pointer;
         }
+    }
+}
+
+.menu-card-container {
+    display: flex;
+    justify-content: space-between;
+    @include ipad-only {
+        flex-direction: column;
+        margin-top: 1.5em;
     }
 }

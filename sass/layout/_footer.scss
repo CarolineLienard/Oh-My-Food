@@ -9,6 +9,7 @@
         flex-wrap: wrap;
         line-height: 1.8em;
         font-size: 1.2em;
+        font-weight: 300;
         padding: 0;
         @include ipad-only {
             flex-direction: column;
