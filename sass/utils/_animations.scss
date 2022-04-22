@@ -1,0 +1,60 @@
+/* loader animation */
+
+
+
+/* like animation */
+
+.like-icon {
+    color: $third-color-font;
+    cursor: pointer;
+    &:hover::before {
+        background: linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        transition: 500ms ease-out;
+    }
+}
+
+
+/* menu card appear animation */
+
+
+
+
+/* menu card check animation */
+
+.menu-card__component:hover .card-price {
+    padding-right: 4em;
+    transition: 0.5s ease;
+  }
+
+  .menu-card__component:hover .menu-card__component--check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide 0.5s ease forwards;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-40px);
+    }
+  }
+
+  .fa-circle-check {
+    animation: rotate 0.6s ease-in-out;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

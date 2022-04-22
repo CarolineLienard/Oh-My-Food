@@ -21,6 +21,9 @@
         box-shadow: 3px 3px 14px #d8d8d8;
         position: relative;
         cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         @include mobile-only {
             width: 100%;
         }
@@ -49,9 +52,6 @@
                 right: 1em;
                 bottom: 1em;
             }
-            &:hover {
-                background-color: red;
-            }
         }
         &--check {
             color: white;
@@ -62,50 +62,8 @@
             background-color: $third-color;
             position: absolute;
             top: 0;
-            right: -0.3em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            right: -1.5em;
             display: none;
         }
     }
 }
-
-/*menu tick rotate animation*/
-
-
-.menu-card__component:hover .card-price {
-    padding-right: 4em;
-    transition: 0.5s ease;
-  }
-  
-  .menu-card__component:hover .menu-card__component--check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: slide-in 0.5s ease forwards;
-  }
-
-  .fa-circle-check {
-    animation: rotate-center 0.5s ease-in-out;
-  }
-
-  @keyframes slide-in {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-8px);
-    }
-  }
-  
-  @keyframes rotate-center {
-    0% {
-      transform: rotate(180deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  

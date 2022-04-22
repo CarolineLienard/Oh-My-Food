@@ -5,6 +5,55 @@
 /** Background color **/
 /** Breakpoints **/
 /** Responsive mixins **/
+/* loader animation */
+/* like animation */
+.like-icon {
+  color: lightgrey;
+  cursor: pointer;
+}
+.like-icon:hover::before {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  transition: 500ms ease-out;
+}
+
+/* menu card appear animation */
+/* menu card check animation */
+.menu-card__component:hover .card-price {
+  padding-right: 4em;
+  transition: 0.5s ease;
+}
+
+.menu-card__component:hover .menu-card__component--check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide 0.5s ease forwards;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40px);
+  }
+}
+.fa-circle-check {
+  animation: rotate 0.6s ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   font-family: "Roboto";
 }
@@ -20,19 +69,6 @@ a {
 
 ul li {
   list-style: none;
-}
-
-.like-icon {
-  color: lightgrey;
-  cursor: pointer;
-}
-.like-icon:hover::before {
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
-  transition: 500ms ease-out;
 }
 
 button {
@@ -141,6 +177,9 @@ button:hover {
   box-shadow: 3px 3px 14px #d8d8d8;
   position: relative;
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media screen and (max-width: 680px) {
   .menu-card__component {
@@ -173,9 +212,6 @@ button:hover {
   right: 1em;
   bottom: 1em;
 }
-.menu-card__component--price:hover {
-  background-color: red;
-}
 .menu-card__component--check {
   color: white;
   font-size: 1.7em;
@@ -185,46 +221,10 @@ button:hover {
   background-color: #99E2D0;
   position: absolute;
   top: 0;
-  right: -0.3em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  right: -1.5em;
   display: none;
 }
 
-/*menu tick rotate animation*/
-.menu-card__component:hover .card-price {
-  padding-right: 4em;
-  transition: 0.5s ease;
-}
-
-.menu-card__component:hover .menu-card__component--check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: slide-in 0.5s ease forwards;
-}
-
-.fa-circle-check {
-  animation: rotate-center 0.5s ease-in-out;
-}
-
-@keyframes slide-in {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-8px);
-  }
-}
-@keyframes rotate-center {
-  0% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .header {
   width: 100%;
   background-color: white;
@@ -444,15 +444,12 @@ button:hover {
 .enchante__button {
   display: flex;
   justify-content: center;
-  margin: 2.8em 0em 3em 0em;
+  margin: 1em 0em 3.5em 0em;
 }
 @media screen and (max-width: 680px) {
   .enchante__button {
     margin: 0.5em 0em 1.8em 0em;
   }
-}
-.enchante__button button {
-  cursor: pointer;
 }
 
 .menu-card-container {

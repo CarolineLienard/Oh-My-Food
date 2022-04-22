@@ -15,19 +15,6 @@ ul li {
     list-style: none;
 }
 
-.like-icon {
-    color: $third-color-font;
-    cursor: pointer;
-    &:hover::before {
-        background: linear-gradient(#FF79DA, #9356DC);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 900;
-        transition: 500ms ease-out;
-    }
-}
-
 button {
     background: linear-gradient(to left top, $primary-color 0%, $secondary-color 100%);
     color: white;
