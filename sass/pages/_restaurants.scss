@@ -1,6 +1,21 @@
-.enchante {
+#enchante-background {
+    background-image: url("../../assets/restaurants/enchante.jpg");
+}
+
+#francaise-background {
+    background-image: url("../../assets/restaurants/francaise.jpg");
+}
+
+#gout-background {
+    background-image: url("../../assets/restaurants/gout.jpg");
+}
+
+#sens-background {
+    background-image: url("../../assets/restaurants/sens.jpg");
+}
+
+.restaurant-details {
     &__image {
-        background-image: url("../../assets/restaurants/enchante.jpg");
         width: 100%;
         height: 19em;
         max-height: 100%;
