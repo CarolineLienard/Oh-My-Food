@@ -1,4 +1,58 @@
 /* loader animation */
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: rgba($background-pale, $alpha: 0.5);
+  top: 0;
+  left: 0;
+  position: fixed;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  animation: loader 0.3s ease 2s forwards;
+  div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin: 0em 0.5em 0em 0.5em;
+  }
+  div:nth-child(1) {
+    background-color: $primary-color;
+    animation: jump 1s ease;
+  }
+  div:nth-child(2) {
+    background-color: $secondary-color;
+    animation: jump 1s ease 0.25s;
+  }
+  div:nth-child(3) {
+    background-color: $third-color;
+    animation: jump 1s ease 0.5s;
+  }
+}
+
+@keyframes jump {
+   0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(1em);
+  }
+  75% {
+    transform: translateY(-1em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 
 
