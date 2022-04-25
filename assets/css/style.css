@@ -373,7 +373,7 @@ button:hover {
 }
 @media screen and (max-width: 680px) {
   .exploration-section h1 {
-    padding: 0em 1em 0em 1em;
+    padding: 0em 1em 0em 0.5em;
   }
 }
 .exploration-section span {
@@ -536,6 +536,11 @@ button:hover {
 .restaurant-details__menu--title h2 {
   font-family: "Shrikhand";
   font-size: 1.7em;
+}
+@media screen and (max-width: 680px) {
+  .restaurant-details__menu--title h2 {
+    width: 40%;
+  }
 }
 .restaurant-details__menu--title i {
   margin-right: 0.5em;

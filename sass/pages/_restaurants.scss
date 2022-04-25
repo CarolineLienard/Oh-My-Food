@@ -44,6 +44,9 @@
             h2 {
                 font-family: "Shrikhand";
                 font-size: 1.7em;
+                @include mobile-only {
+                    width: 40%;
+                }
             }
             i {
                 margin-right: 0.5em;
