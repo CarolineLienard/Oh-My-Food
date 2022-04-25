@@ -17,7 +17,7 @@ You need to :
 
 ### Screenshot
 
-![](./preview.png)
+![](./preview.jpg)
 
 
 ### Links
