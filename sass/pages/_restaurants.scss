@@ -28,7 +28,7 @@
         border-radius: 20px 20px 0px 0px;
         margin-top: -2em;
         @include mobile-only {
-            padding: 2em 1.3em 2em 1.3em;
+            padding: 2.5em 1.5em 2em 1.5em;
         }
         &--title {
             display: flex;
@@ -58,6 +58,28 @@
     justify-content: space-between;
     @include ipad-only {
         flex-direction: column;
-        margin-top: 1.5em;
+        margin-top: 1em;
     }
 }
+
+.menu-card {
+    &__component {
+      animation: appear 1s ease-in-out forwards;
+      opacity: 0;
+    }
+    .menu-card__component:nth-child(2) {
+    animation-delay: 0.2s;
+    }
+  
+    .menu-card__component:nth-child(3) {
+      animation-delay: 0.7s;
+    }
+  
+    .menu-card__component:nth-child(4) {
+      animation-delay: 1.2s;
+    }
+  
+    .menu-card__component:nth-child(5) {
+      animation-delay: 1.7s;
+    }
+  }

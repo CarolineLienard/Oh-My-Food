@@ -1,37 +1,4 @@
 /* loader animation */
-.loader {
-  width: 100%;
-  height: 100%;
-  background-color: rgba($background-pale, $alpha: 0.5);
-  top: 0;
-  left: 0;
-  position: fixed;
-  opacity: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  animation: loader 0.3s ease 2s forwards;
-  div {
-    width: 30px;
-    height: 30px;
-    border-radius: 50px;
-    margin: 0em 0.5em 0em 0.5em;
-  }
-  div:nth-child(1) {
-    background-color: $primary-color;
-    animation: jump 1s ease;
-  }
-  div:nth-child(2) {
-    background-color: $secondary-color;
-    animation: jump 1s ease 0.25s;
-  }
-  div:nth-child(3) {
-    background-color: $third-color;
-    animation: jump 1s ease 0.5s;
-  }
-}
-
 @keyframes jump {
    0% {
     transform: translateY(0);
@@ -54,46 +21,7 @@
   }
 }
 
-
-
-/* like animation */
-.like-icon {
-    color: $third-color-font;
-    cursor: pointer;
-    &:hover::before {
-        background: linear-gradient(#FF79DA, #9356DC);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 900;
-        transition: 500ms ease-out;
-    }
-}
-
-
 /* menu card appear animation */
-.menu-card {
-  &__component {
-    animation: appear 1s ease-in-out forwards;
-    opacity: 0;
-  }
-  .menu-card__component:nth-child(2) {
-  animation-delay: 0.2s;
-  }
-
-  .menu-card__component:nth-child(3) {
-    animation-delay: 0.7s;
-  }
-
-  .menu-card__component:nth-child(4) {
-    animation-delay: 1.2s;
-  }
-
-  .menu-card__component:nth-child(5) {
-    animation-delay: 1.7s;
-  }
-}
-
 @keyframes appear{
   0%{
       transform: translateY(30px);
@@ -107,19 +35,6 @@
 
 
 /* menu card check animation */
-
-.menu-card__component:hover .card-price {
-    padding-right: 4em;
-    transition: 0.5s ease;
-  }
-
-  .menu-card__component:hover .menu-card__component--check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: slide 0.5s ease forwards;
-  }
-
   @keyframes slide {
     0% {
       transform: translateX(0);
@@ -127,10 +42,6 @@
     100% {
       transform: translateX(-40px);
     }
-  }
-
-  .fa-circle-check {
-    animation: rotate 0.6s ease-in-out;
   }
 
   @keyframes rotate {

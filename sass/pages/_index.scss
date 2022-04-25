@@ -1,3 +1,35 @@
+.loader {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($background-pale, $alpha: 0.5);
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    animation: loader 0.3s ease 2s forwards;
+    div {
+      width: 30px;
+      height: 30px;
+      border-radius: 50px;
+      margin: 0em 0.5em 0em 0.5em;
+    }
+    div:nth-child(1) {
+      background-color: $primary-color;
+      animation: jump 1s ease;
+    }
+    div:nth-child(2) {
+      background-color: $secondary-color;
+      animation: jump 1s ease 0.25s;
+    }
+    div:nth-child(3) {
+      background-color: $third-color;
+      animation: jump 1s ease 0.5s;
+    }
+  }
+
 .location-section {
     background-color: $background-light;
     height: 3.5em;
@@ -106,7 +138,7 @@
     }
     h2 {
         font-size: 1.5em;
-        margin-left: 1em;
+        margin: 1em 0em 1.5em 1em;
     }
     &_container {
     margin: 1em 1.5em 1em 1.5em;

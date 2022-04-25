@@ -29,6 +29,19 @@ button {
     }
 }
 
+.like-icon {
+    color: $third-color-font;
+    cursor: pointer;
+    &:hover::before {
+        background: linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        transition: 500ms ease-out;
+    }
+}
+
 
 
   

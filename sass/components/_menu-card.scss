@@ -33,6 +33,12 @@
             text-overflow: ellipsis;
             overflow: hidden;
             width: 65%;
+            @include ipad-only {
+                width: 55%;
+            }
+            @include mobile-only {
+                width: 65%;
+            }
             h4 {
             margin: 0;
             font-weight: 500;
@@ -67,3 +73,21 @@
         }
     }
 }
+
+/** Component Animation **/
+
+.menu-card__component:hover .card-price {
+    padding-right: 4em;
+    transition: 0.5s ease;
+  }
+
+  .menu-card__component:hover .menu-card__component--check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide 0.5s ease forwards;
+  }
+
+  .fa-circle-check {
+    animation: rotate 0.6s ease-in-out;
+  }
