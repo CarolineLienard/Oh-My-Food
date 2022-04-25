@@ -373,7 +373,7 @@ button:hover {
 }
 @media screen and (max-width: 680px) {
   .exploration-section h1 {
-    padding: 0em 2em 0em 2em;
+    padding: 0em 1em 0em 1em;
   }
 }
 .exploration-section span {
@@ -468,6 +468,11 @@ button:hover {
 .restaurant h2 {
   font-size: 1.5em;
   margin: 1em 0em 1.5em 1em;
+}
+@media screen and (max-width: 680px) {
+  .restaurant h2 {
+    margin: 1em 0em 0em 1em;
+  }
 }
 .restaurant_container {
   margin: 1em 1.5em 1em 1.5em;
