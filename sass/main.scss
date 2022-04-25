@@ -1,13 +1,12 @@
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/animations";
 
 
 @import "./base/base";
 
-@import "./components/card";
-@import "./components/_menu-card";
+@import "./components/restaurant-card";
+@import "./components/menu-card";
 
 @import "./layout/header";
 @import "./layout/footer";

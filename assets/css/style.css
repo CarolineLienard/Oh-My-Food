@@ -246,7 +246,7 @@ button:hover {
   color: white;
   padding: 3em 1em 3em 3em;
 }
-.footer > ul {
+.footer ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -257,20 +257,20 @@ button:hover {
   padding: 0;
 }
 @media screen and (max-width: 990px) {
-  .footer > ul {
+  .footer ul {
     flex-direction: column;
     align-items: flex-start;
   }
 }
-.footer > ul > li:nth-child(1) {
+.footer ul li:nth-child(1) {
   font-family: "Shrikhand";
   font-size: 1.5em;
   margin: 0.6em 0em 0.6em 0em;
 }
-.footer > ul > li:nth-child(2) i {
+.footer ul li:nth-child(2) i {
   margin-right: 1em;
 }
-.footer > ul > li:nth-child(3) i {
+.footer ul li:nth-child(3) i {
   margin-right: 0.7em;
 }
 
