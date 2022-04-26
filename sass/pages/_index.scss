@@ -54,7 +54,7 @@
     h1 {
         font-size: 1.5em;
         @include mobile-only {
-            padding: 0em 1em 0em 0.5em;    
+            padding: 0em 1em 0em 1em;    
         }
     }
     span {
