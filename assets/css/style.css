@@ -354,6 +354,9 @@ button:hover {
   justify-content: center;
   color: #353535;
 }
+.location-section h4 {
+  font-weight: 400;
+}
 .location-section i {
   margin-right: 1.2em;
 }
@@ -373,7 +376,7 @@ button:hover {
 }
 @media screen and (max-width: 680px) {
   .exploration-section h1 {
-    padding: 0em 1em 0em 0.5em;
+    padding: 0em 1em 0em 1em;
   }
 }
 .exploration-section span {
@@ -390,7 +393,7 @@ button:hover {
     margin: 2.5em 0em 2.5em 0em;
   }
 }
-.detail-section span {
+.detail-section h2 {
   font-size: 1.5em;
   font-weight: 700;
   margin-left: 1em;
@@ -427,23 +430,46 @@ button:hover {
     width: 90%;
   }
 }
-.detail-section__container > ul > i {
+.detail-section__container > ul li {
+  color: black;
+}
+.detail-section__container > ul li:nth-child(2) > i {
   color: lightgrey;
   margin: 0em 1.7em 0em 0em;
-}
-.detail-section__container > ul > li {
-  color: black;
 }
 .detail-section__container :hover {
   cursor: pointer;
   color: inherit;
   background-color: #f5edff;
 }
-.detail-section__container :hover i {
-  color: lightgrey;
-}
 
 #icon-number {
+  background-color: #9356DC;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  margin: 0em 1.7em 0em -3.4em;
+}
+
+#icon-number2 {
+  background-color: #9356DC;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  margin: 0em 1.7em 0em -3.4em;
+}
+
+#icon-number3 {
   background-color: #9356DC;
   width: 1.5em;
   height: 1.5em;
@@ -567,6 +593,7 @@ button:hover {
   }
 }
 
+/** menu card animation**/
 .menu-card__component {
   animation: appear 1s ease-in-out forwards;
   opacity: 0;
